@@ -122,6 +122,7 @@ typedef struct {
   EFI_SIMPLE_TEXT_INPUT_EX_PROTOCOL   SimpleInputEx;
   LIST_ENTRY                          NotifyList;
   EFI_EVENT                           KeyNotifyProcessEvent;
+  BOOLEAN                             DecMode;
 } TERMINAL_DEV;
 
 #define INPUT_STATE_DEFAULT               0x00
@@ -169,6 +170,7 @@ typedef struct {
   UINT16  Unicode;
   CHAR8   PcAnsi;
   CHAR8   Ascii;
+  CHAR8   Dec;
 } UNICODE_TO_CHAR;
 
 //
@@ -1380,7 +1382,8 @@ BOOLEAN
 TerminalIsValidTextGraphics (
   IN  CHAR16  Graphic,
   OUT CHAR8   *PcAnsi, OPTIONAL
-  OUT CHAR8   *Ascii OPTIONAL
+  OUT CHAR8   *Ascii, OPTIONAL
+  OUT CHAR8   *Dec OPTIONAL
   );
 
 /**
