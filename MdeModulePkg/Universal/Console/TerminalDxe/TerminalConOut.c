@@ -193,7 +193,7 @@ TerminalConOutOutputString (
   ValidBytes = 0;
   Warning    = FALSE;
   AsciiChar  = 0;
-  ModeSwitchLength = 3;
+  ModeSwitchLength = LENGTH_DEC_ESCAPE;
   //
   // get Terminal device data structure pointer.
   //
@@ -259,7 +259,7 @@ TerminalConOutOutputString (
           if(*WString < BOXDRAW_DOUBLE_HORIZONTAL) {
             if (!TerminalDevice->DecMode) {
               ValidBytes = 0;
-              ModeSwitchLength = 3;
+              ModeSwitchLength = LENGTH_DEC_ESCAPE;
               Status = TerminalDevice->SerialIo->Write (
                                                    TerminalDevice->SerialIo,
                                                    &ModeSwitchLength,
@@ -272,7 +272,7 @@ TerminalConOutOutputString (
             Length = 1;
           } else {
             if (TerminalDevice->DecMode) {
-              ModeSwitchLength = 3;
+              ModeSwitchLength = LENGTH_DEC_ESCAPE;
               Status = TerminalDevice->SerialIo->Write (
                                                    TerminalDevice->SerialIo,
                                                    &ModeSwitchLength,
@@ -388,7 +388,7 @@ TerminalConOutOutputString (
         Length = 1;
         if (TerminalIsValidTextGraphics (*WString, NULL, NULL, &DecChar)) {
           if (!TerminalDevice->DecMode) {
-            ModeSwitchLength = 3;
+            ModeSwitchLength = LENGTH_DEC_ESCAPE;
             Status = TerminalDevice->SerialIo->Write (
                                                  TerminalDevice->SerialIo,
                                                  &ModeSwitchLength,
@@ -400,7 +400,7 @@ TerminalConOutOutputString (
           GraphicChar = DecChar;
         } else {
           if (TerminalDevice->DecMode) {
-            ModeSwitchLength = 3;
+            ModeSwitchLength = LENGTH_DEC_ESCAPE;
             Status = TerminalDevice->SerialIo->Write (
                                                  TerminalDevice->SerialIo,
                                                  &ModeSwitchLength,

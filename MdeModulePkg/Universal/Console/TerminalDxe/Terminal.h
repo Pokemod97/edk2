@@ -124,6 +124,7 @@ typedef struct {
   EFI_EVENT                           KeyNotifyProcessEvent;
   BOOLEAN                             DecMode;
 } TERMINAL_DEV;
+#define LENGTH_DEC_ESCAPE                 0x03
 
 #define INPUT_STATE_DEFAULT               0x00
 #define INPUT_STATE_ESC                   0x01
