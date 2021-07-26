@@ -16,61 +16,59 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 //
 //
 UNICODE_TO_CHAR  UnicodeToPcAnsiOrAscii[] = {
-  { BOXDRAW_HORIZONTAL,                 0xc4, L'-' },
-  { BOXDRAW_VERTICAL,                   0xb3, L'|' },
-  { BOXDRAW_DOWN_RIGHT,                 0xda, L'/' },
-  { BOXDRAW_DOWN_LEFT,                  0xbf, L'\\' },
-  { BOXDRAW_UP_RIGHT,                   0xc0, L'\\' },
-  { BOXDRAW_UP_LEFT,                    0xd9, L'/' },
-  { BOXDRAW_VERTICAL_RIGHT,             0xc3, L'|' },
-  { BOXDRAW_VERTICAL_LEFT,              0xb4, L'|' },
-  { BOXDRAW_DOWN_HORIZONTAL,            0xc2, L'+' },
-  { BOXDRAW_UP_HORIZONTAL,              0xc1, L'+' },
-  { BOXDRAW_VERTICAL_HORIZONTAL,        0xc5, L'+' },
-  { BOXDRAW_DOUBLE_HORIZONTAL,          0xcd, L'-' },
-  { BOXDRAW_DOUBLE_VERTICAL,            0xba, L'|' },
-  { BOXDRAW_DOWN_RIGHT_DOUBLE,          0xd5, L'/' },
-  { BOXDRAW_DOWN_DOUBLE_RIGHT,          0xd6, L'/' },
-  { BOXDRAW_DOUBLE_DOWN_RIGHT,          0xc9, L'/' },
-  { BOXDRAW_DOWN_LEFT_DOUBLE,           0xb8, L'\\' },
-  { BOXDRAW_DOWN_DOUBLE_LEFT,           0xb7, L'\\' },
-  { BOXDRAW_DOUBLE_DOWN_LEFT,           0xbb, L'\\' },
-  { BOXDRAW_UP_RIGHT_DOUBLE,            0xd4, L'\\' },
-  { BOXDRAW_UP_DOUBLE_RIGHT,            0xd3, L'\\' },
-  { BOXDRAW_DOUBLE_UP_RIGHT,            0xc8, L'\\' },
-  { BOXDRAW_UP_LEFT_DOUBLE,             0xbe, L'/' },
-  { BOXDRAW_UP_DOUBLE_LEFT,             0xbd, L'/' },
-  { BOXDRAW_DOUBLE_UP_LEFT,             0xbc, L'/' },
-  { BOXDRAW_VERTICAL_RIGHT_DOUBLE,      0xc6, L'|' },
-  { BOXDRAW_VERTICAL_DOUBLE_RIGHT,      0xc7, L'|' },
-  { BOXDRAW_DOUBLE_VERTICAL_RIGHT,      0xcc, L'|' },
-  { BOXDRAW_VERTICAL_LEFT_DOUBLE,       0xb5, L'|' },
-  { BOXDRAW_VERTICAL_DOUBLE_LEFT,       0xb6, L'|' },
-  { BOXDRAW_DOUBLE_VERTICAL_LEFT,       0xb9, L'|' },
-  { BOXDRAW_DOWN_HORIZONTAL_DOUBLE,     0xd1, L'+' },
-  { BOXDRAW_DOWN_DOUBLE_HORIZONTAL,     0xd2, L'+' },
-  { BOXDRAW_DOUBLE_DOWN_HORIZONTAL,     0xcb, L'+' },
-  { BOXDRAW_UP_HORIZONTAL_DOUBLE,       0xcf, L'+' },
-  { BOXDRAW_UP_DOUBLE_HORIZONTAL,       0xd0, L'+' },
-  { BOXDRAW_DOUBLE_UP_HORIZONTAL,       0xca, L'+' },
-  { BOXDRAW_VERTICAL_HORIZONTAL_DOUBLE, 0xd8, L'+' },
-  { BOXDRAW_VERTICAL_DOUBLE_HORIZONTAL, 0xd7, L'+' },
-  { BOXDRAW_DOUBLE_VERTICAL_HORIZONTAL, 0xce, L'+' },
+  { BOXDRAW_HORIZONTAL,                 0xc4, L'-',  0x71 },
+  { BOXDRAW_VERTICAL,                   0xb3, L'|',  0x78 },
+  { BOXDRAW_DOWN_RIGHT,                 0xda, L'/',  0x6c },
+  { BOXDRAW_DOWN_LEFT,                  0xbf, L'\\', 0x6b },
+  { BOXDRAW_UP_RIGHT,                   0xc0, L'\\', 0x6d },
+  { BOXDRAW_UP_LEFT,                    0xd9, L'/',  0x6a },
+  { BOXDRAW_VERTICAL_RIGHT,             0xc3, L'|',  0x74 },
+  { BOXDRAW_VERTICAL_LEFT,              0xb4, L'|',  0x75 },
+  { BOXDRAW_DOWN_HORIZONTAL,            0xc2, L'+',  0x77 },
+  { BOXDRAW_UP_HORIZONTAL,              0xc1, L'+',  0x76 },
+  { BOXDRAW_VERTICAL_HORIZONTAL,        0xc5, L'+',  0x6e },
+  { BOXDRAW_DOUBLE_HORIZONTAL,          0xcd, L'-',  0x71 },
+  { BOXDRAW_DOUBLE_VERTICAL,            0xba, L'|',  0x78 },
+  { BOXDRAW_DOWN_RIGHT_DOUBLE,          0xd5, L'/',  0x6c },
+  { BOXDRAW_DOWN_DOUBLE_RIGHT,          0xd6, L'/',  0x6c },
+  { BOXDRAW_DOUBLE_DOWN_RIGHT,          0xc9, L'/',  0x6c },
+  { BOXDRAW_DOWN_LEFT_DOUBLE,           0xb8, L'\\', 0x6b },
+  { BOXDRAW_DOWN_DOUBLE_LEFT,           0xb7, L'\\', 0x6b },
+  { BOXDRAW_DOUBLE_DOWN_LEFT,           0xbb, L'\\', 0x6b },
+  { BOXDRAW_UP_RIGHT_DOUBLE,            0xd4, L'\\', 0x6d },
+  { BOXDRAW_UP_DOUBLE_RIGHT,            0xd3, L'\\', 0x6d },
+  { BOXDRAW_DOUBLE_UP_RIGHT,            0xc8, L'\\', 0x6d },
+  { BOXDRAW_UP_LEFT_DOUBLE,             0xbe, L'/',  0x6a },
+  { BOXDRAW_UP_DOUBLE_LEFT,             0xbd, L'/',  0x6a },
+  { BOXDRAW_DOUBLE_UP_LEFT,             0xbc, L'/',  0x6a },
+  { BOXDRAW_VERTICAL_RIGHT_DOUBLE,      0xc6, L'|',  0x74 },
+  { BOXDRAW_VERTICAL_DOUBLE_RIGHT,      0xc7, L'|',  0x74 },
+  { BOXDRAW_DOUBLE_VERTICAL_RIGHT,      0xcc, L'|',  0x74 },
+  { BOXDRAW_VERTICAL_LEFT_DOUBLE,       0xb5, L'|',  0x75 },
+  { BOXDRAW_VERTICAL_DOUBLE_LEFT,       0xb6, L'|',  0x75 },
+  { BOXDRAW_DOUBLE_VERTICAL_LEFT,       0xb9, L'|',  0x75 },
+  { BOXDRAW_DOWN_HORIZONTAL_DOUBLE,     0xd1, L'+',  0x77 },
+  { BOXDRAW_DOWN_DOUBLE_HORIZONTAL,     0xd2, L'+',  0x77 },
+  { BOXDRAW_DOUBLE_DOWN_HORIZONTAL,     0xcb, L'+',  0x77 },
+  { BOXDRAW_UP_HORIZONTAL_DOUBLE,       0xcf, L'+',  0x76 },
+  { BOXDRAW_UP_DOUBLE_HORIZONTAL,       0xd0, L'+',  0x76 },
+  { BOXDRAW_DOUBLE_UP_HORIZONTAL,       0xca, L'+',  0x76 },
+  { BOXDRAW_VERTICAL_HORIZONTAL_DOUBLE, 0xd8, L'+',  0x6e },
+  { BOXDRAW_VERTICAL_DOUBLE_HORIZONTAL, 0xd7, L'+',  0x6e },
+  { BOXDRAW_DOUBLE_VERTICAL_HORIZONTAL, 0xce, L'+',  0x6e },
 
-  { BLOCKELEMENT_FULL_BLOCK,            0xdb, L'*' },
-  { BLOCKELEMENT_LIGHT_SHADE,           0xb0, L'+' },
+  { BLOCKELEMENT_FULL_BLOCK,            0xdb, L'*',  0x61 },
+  { BLOCKELEMENT_LIGHT_SHADE,           0xb0, L'+',  0x61 },
 
-  { GEOMETRICSHAPE_UP_TRIANGLE,         '^', L'^' },
-  { GEOMETRICSHAPE_RIGHT_TRIANGLE,      '>', L'>' },
-  { GEOMETRICSHAPE_DOWN_TRIANGLE,       'v', L'v' },
-  { GEOMETRICSHAPE_LEFT_TRIANGLE,       '<', L'<' },
+  { GEOMETRICSHAPE_UP_TRIANGLE,         '^',  L'^',  L'^' },
+  { GEOMETRICSHAPE_RIGHT_TRIANGLE,      '>',  L'>',  L'>' },
+  { GEOMETRICSHAPE_DOWN_TRIANGLE,       'v',  L'v',  L'v' },
+  { GEOMETRICSHAPE_LEFT_TRIANGLE,       '<',  L'<',  L'<' },
 
-  { ARROW_LEFT,                         '<', L'<' },
-  { ARROW_UP,                           '^', L'^' },
-  { ARROW_RIGHT,                        '>', L'>' },
-  { ARROW_DOWN,                         'v', L'v' },
-
-  { 0x0000,                             0x00, L'\0' }
+  { ARROW_LEFT,                         '<',  L'<',  L'<' },
+  { ARROW_UP,                           '^',  L'^',  L'^' },
+  { ARROW_RIGHT,                        '>',  L'>',  L'>' },
+  { ARROW_DOWN,                         'v',  L'v',  L'v' },
 };
 
 CHAR16 mSetModeString[]            = { ESC, '[', '=', '3', 'h', 0 };
@@ -80,6 +78,8 @@ CHAR16 mSetCursorPositionString[]  = { ESC, '[', '0', '0', ';', '0', '0', 'H', 0
 CHAR16 mCursorForwardString[]      = { ESC, '[', '0', '0', 'C', 0 };
 CHAR16 mCursorBackwardString[]     = { ESC, '[', '0', '0', 'D', 0 };
 
+CHAR8  SetDecModeString[]          = {ESC, 0x28, 0x30};
+CHAR8  ExitDecModeString[]         = {ESC, 0x28, 0x42};
 //
 // Body of the ConOut functions
 //
@@ -183,16 +183,19 @@ TerminalConOutOutputString (
   EFI_STATUS                  Status;
   UINT8                       ValidBytes;
   CHAR8                       CrLfStr[2];
+  CHAR8                       DecChar;
+  UINTN                       ModeSwitchLength;
   //
   //  flag used to indicate whether condition happens which will cause
   //  return EFI_WARN_UNKNOWN_GLYPH
   //
   BOOLEAN                     Warning;
 
-  ValidBytes  = 0;
-  Warning     = FALSE;
-  AsciiChar   = 0;
-
+  ValidBytes       = 0;
+  Warning          = FALSE;
+  AsciiChar        = 0;
+  DecChar          = 0;
+  ModeSwitchLength = LENGTH_DEC_ESCAPE;
   //
   //  get Terminal device data structure pointer.
   //
@@ -217,17 +220,136 @@ TerminalConOutOutputString (
   for (; *WString != CHAR_NULL; WString++) {
 
     switch (TerminalDevice->TerminalType) {
-
     case TerminalTypePcAnsi:
-    case TerminalTypeVt100:
-    case TerminalTypeVt100Plus:
-    case TerminalTypeTtyTerm:
-    case TerminalTypeLinux:
-    case TerminalTypeXtermR6:
-    case TerminalTypeVt400:
-    case TerminalTypeSCO:
+      if (!TerminalIsValidTextGraphics (*WString, &GraphicChar, &AsciiChar, NULL)) {
+        //
+        // If it's not a graphic character convert Unicode to ASCII.
+        //
+          GraphicChar = (CHAR8)*WString;
 
-      if (!TerminalIsValidTextGraphics (*WString, &GraphicChar, &AsciiChar)) {
+        if (!(TerminalIsValidAscii (GraphicChar) || TerminalIsValidEfiCntlChar (GraphicChar))) {
+          //
+          // when this driver use the OutputString to output control string,
+          // TerminalDevice->OutputEscChar is set to let the Esc char
+          // to be output to the terminal emulation software.
+          //
+          if ((GraphicChar == 27) && TerminalDevice->OutputEscChar) {
+            GraphicChar = 27;
+          } else {
+            GraphicChar = '?';
+            Warning     = TRUE;
+          }
+        }
+
+        AsciiChar = GraphicChar;
+      }
+      Length = 1;
+      Status = TerminalDevice->SerialIo->Write (
+                                          TerminalDevice->SerialIo,
+                                          &Length,
+                                          &GraphicChar
+                                          );
+
+      if (EFI_ERROR (Status)) {
+        goto OutputError;
+      }
+
+      break;
+    case TerminalTypeXtermR6:
+    case TerminalTypeSCO:
+        if (TerminalIsValidTextGraphics (*WString, NULL, NULL, &DecChar) && !TerminalIsValidAscii (*WString)) {
+          //Box graphics are split into 2 types simple and advanced
+          //simple are drawn with dec special graphics
+          //advanced are drawn with utf8
+          //This checks for simple because they have a lower value than the advanced
+          if(*WString < BOXDRAW_DOUBLE_HORIZONTAL) {
+            if (!TerminalDevice->DecSpecialGraphicsMode) {
+              ValidBytes = 0;
+              ModeSwitchLength = LENGTH_DEC_ESCAPE;
+              Status = TerminalDevice->SerialIo->Write (
+                                                   TerminalDevice->SerialIo,
+                                                   &ModeSwitchLength,
+                                                   (UINT8 *)SetDecModeString
+                                          );
+          TerminalDevice->DecSpecialGraphicsMode = TRUE;
+        }
+
+        GraphicChar = DecChar;
+        Length = 1;
+          } else {
+            if (TerminalDevice->DecSpecialGraphicsMode) {
+              ModeSwitchLength = LENGTH_DEC_ESCAPE;
+              Status = TerminalDevice->SerialIo->Write (
+                                                   TerminalDevice->SerialIo,
+                                                   &ModeSwitchLength,
+                                                   (UINT8 *)ExitDecModeString
+                                                );
+                if (EFI_ERROR (Status)) {
+                  goto OutputError;
+                }
+
+            TerminalDevice->DecSpecialGraphicsMode = FALSE;
+          }
+
+          UnicodeToUtf8 (*WString, &Utf8Char, &ValidBytes);
+          Length = ValidBytes;
+        }
+        } else {
+          if (TerminalDevice->DecSpecialGraphicsMode) {
+          Status = TerminalDevice->SerialIo->Write (
+                                          TerminalDevice->SerialIo,
+                                          &ModeSwitchLength,
+                                          (UINT8 *)ExitDecModeString
+                                          );
+          if (EFI_ERROR (Status)) {
+            goto OutputError;
+          }
+
+          TerminalDevice->DecSpecialGraphicsMode = FALSE;
+        }
+
+          GraphicChar = (CHAR8)*WString;
+
+        if (!(TerminalIsValidAscii (GraphicChar) || TerminalIsValidEfiCntlChar (GraphicChar))) {
+          //
+          // when this driver use the OutputString to output control string,
+          // TerminalDevice->OutputEscChar is set to let the Esc char
+          // to be output to the terminal emulation software.
+          //
+            if ((GraphicChar == 27) && TerminalDevice->OutputEscChar) {
+              GraphicChar = 27;
+              Length = 1;
+            } else {
+          UnicodeToUtf8 (*WString, &Utf8Char, &ValidBytes);
+          Length = ValidBytes;
+            }
+          } else {
+        Length = 1;
+      }
+      }
+
+        if (ValidBytes) {
+        Status = TerminalDevice->SerialIo->Write (
+                                        TerminalDevice->SerialIo,
+                                        &Length,
+                                               (UINT8 *)&Utf8Char
+                                        );
+          ValidBytes = 0;
+        } else {
+      Status = TerminalDevice->SerialIo->Write (
+                                      TerminalDevice->SerialIo,
+                                      &Length,
+                                      &GraphicChar
+                                      );
+        }
+      if (EFI_ERROR (Status)) {
+        goto OutputError;
+      }
+
+      break;
+    case TerminalTypeVt100:
+    case TerminalTypeTtyTerm:
+      if (!TerminalIsValidTextGraphics (*WString, &GraphicChar, &AsciiChar, NULL)) {
         //
         // If it's not a graphic character convert Unicode to ASCII.
         //
@@ -248,12 +370,9 @@ TerminalConOutOutputString (
         }
 
         AsciiChar = GraphicChar;
-
       }
 
-      if (TerminalDevice->TerminalType != TerminalTypePcAnsi) {
-        GraphicChar = AsciiChar;
-      }
+      GraphicChar = AsciiChar;
 
       Length = 1;
 
@@ -267,8 +386,67 @@ TerminalConOutOutputString (
         goto OutputError;
       }
 
-      break;
+        break;
+    case TerminalTypeVt100Plus:
+    case TerminalTypeVt400:
+        Length = 1;
+        if (TerminalIsValidTextGraphics (*WString, NULL, NULL, &DecChar)) {
+          if (!TerminalDevice->DecSpecialGraphicsMode) {
+            ModeSwitchLength = LENGTH_DEC_ESCAPE;
+            Status = TerminalDevice->SerialIo->Write (
+                                                 TerminalDevice->SerialIo,
+                                                 &ModeSwitchLength,
+                                                 (UINT8 *)SetDecModeString
+                                          );
+          TerminalDevice->DecSpecialGraphicsMode = TRUE;
+        }
 
+        GraphicChar = DecChar;
+        } else {
+          if (TerminalDevice->DecSpecialGraphicsMode) {
+            ModeSwitchLength = LENGTH_DEC_ESCAPE;
+            Status = TerminalDevice->SerialIo->Write (
+                                                 TerminalDevice->SerialIo,
+                                                 &ModeSwitchLength,
+                                                 (UINT8 *)ExitDecModeString
+                                          );
+
+          if (EFI_ERROR (Status)) {
+            goto OutputError;
+          }
+
+          TerminalDevice->DecSpecialGraphicsMode = FALSE;
+        }
+
+          GraphicChar = (CHAR8)*WString;
+
+        if (!(TerminalIsValidAscii (GraphicChar) || TerminalIsValidEfiCntlChar (GraphicChar))) {
+          //
+          // when this driver use the OutputString to output control string,
+          // TerminalDevice->OutputEscChar is set to let the Esc char
+          // to be output to the terminal emulation software.
+          //
+          if ((GraphicChar == 27) && TerminalDevice->OutputEscChar) {
+            GraphicChar = 27;
+          } else {
+            GraphicChar = '?';
+            Warning     = TRUE;
+          }
+        }
+      }
+
+    Status = TerminalDevice->SerialIo->Write (
+                                      TerminalDevice->SerialIo,
+                                      &Length,
+                                      &GraphicChar
+                                      );
+
+      if (EFI_ERROR (Status)) {
+        goto OutputError;
+      }
+
+        break;
+    case TerminalTypeLinux:
     case TerminalTypeVtUtf8:
       UnicodeToUtf8 (*WString, &Utf8Char, &ValidBytes);
       Length = ValidBytes;
@@ -280,8 +458,10 @@ TerminalConOutOutputString (
       if (EFI_ERROR (Status)) {
         goto OutputError;
       }
+
       break;
     }
+
     //
     //  Update cursor position.
     //
@@ -875,7 +1055,8 @@ BOOLEAN
 TerminalIsValidTextGraphics (
   IN  CHAR16  Graphic,
   OUT CHAR8   *PcAnsi, OPTIONAL
-  OUT CHAR8   *Ascii OPTIONAL
+  OUT CHAR8   *Ascii, OPTIONAL
+  OUT CHAR8   *DecSpecialGraphics OPTIONAL
   )
 {
   UNICODE_TO_CHAR *Table;
@@ -896,6 +1077,9 @@ TerminalIsValidTextGraphics (
 
       if (Ascii != NULL) {
         *Ascii = Table->Ascii;
+      }
+      if (DecSpecialGraphics != NULL){
+        *DecSpecialGraphics = Table->DecSpecialGraphics;
       }
 
       return TRUE;
