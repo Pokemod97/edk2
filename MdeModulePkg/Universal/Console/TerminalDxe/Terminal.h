@@ -122,7 +122,12 @@ typedef struct {
   EFI_SIMPLE_TEXT_INPUT_EX_PROTOCOL   SimpleInputEx;
   LIST_ENTRY                          NotifyList;
   EFI_EVENT                           KeyNotifyProcessEvent;
+  BOOLEAN                             DecSpecialGraphicsMode;
 } TERMINAL_DEV;
+//
+// This the length the escape sequences for entering and exiting Dec Special Graphics Mode
+//
+#define LENGTH_DEC_ESCAPE                 0x03
 
 #define INPUT_STATE_DEFAULT               0x00
 #define INPUT_STATE_ESC                   0x01
@@ -169,6 +174,7 @@ typedef struct {
   UINT16  Unicode;
   CHAR8   PcAnsi;
   CHAR8   Ascii;
+  CHAR8   DecSpecialGraphics;
 } UNICODE_TO_CHAR;
 
 //
@@ -1367,20 +1373,22 @@ Utf8ToUnicode (
 /**
   Detects if a Unicode char is for Box Drawing text graphics.
 
-  @param  Graphic      Unicode char to test.
-  @param  PcAnsi       Optional pointer to return PCANSI equivalent of
-                       Graphic.
-  @param  Ascii        Optional pointer to return ASCII equivalent of
-                       Graphic.
-
-  @retval TRUE         If Graphic is a supported Unicode Box Drawing character.
+  @param  Graphic             Unicode char to test.
+  @param  PcAnsi              Optional pointer to return PCANSI equivalent of
+                              Graphic.
+  @param  Ascii               Optional pointer to return ASCII equivalent of
+                              Graphic.
+  @param  DecSpecialGraphics  Optional pointer to return Dec Special Graphics equivalent of
+                              Graphic.
+  @retval TRUE                If Graphic is a supported Unicode Box Drawing character.
 
 **/
 BOOLEAN
 TerminalIsValidTextGraphics (
   IN  CHAR16  Graphic,
-  OUT CHAR8   *PcAnsi, OPTIONAL
-  OUT CHAR8   *Ascii OPTIONAL
+  OUT CHAR8   *PcAnsi,            OPTIONAL
+  OUT CHAR8   *Ascii,             OPTIONAL
+  OUT CHAR8   *DecSpecialGraphics OPTIONAL
   );
 
 /**

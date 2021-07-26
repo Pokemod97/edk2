@@ -63,7 +63,7 @@ AnsiTestString (
 
     if ( !(TerminalIsValidAscii (*WString) ||
         TerminalIsValidEfiCntlChar (*WString) ||
-        TerminalIsValidTextGraphics (*WString, &GraphicChar, NULL) )) {
+        TerminalIsValidTextGraphics (*WString, &GraphicChar, NULL, NULL) )) {
 
       return EFI_UNSUPPORTED;
     }
